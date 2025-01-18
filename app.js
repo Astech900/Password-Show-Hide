@@ -2,37 +2,30 @@ let passInput = document.getElementById('pass');
 let icon = document.getElementById('eye-icon');
 let submitBtn = document.getElementById('btn');
 
-submitBtn.addEventListener('click',()=>{
-    passInput.value = "";
-})
-
 
 passInput.addEventListener('focus',()=>{
-
     icon.classList.add('icon-visible');
-
-
 })
+
+
 icon.addEventListener('click',()=>{
     if(passInput.type === "password"){
 
         passInput.type = 'text';
-        icon.classList.remove('fa-eye-slash')
-        icon.classList.add('fa-eye')
-      
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');  
         
+    }else{  
         
-    }else{
-       
         passInput.type = "password";
-        icon.classList.remove('fa-eye')
-        icon.classList.add('fa-eye-slash')
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
       
     }
 })
-
-
-
+submitBtn.addEventListener('click',()=>{
+    passInput.value = "";
+})
 
 
 
