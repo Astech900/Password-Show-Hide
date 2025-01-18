@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #4C585B;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+form{
+    
+    width: 22rem;
+    /* height: 20rem; */
+    background-color: #000;
+    color: #fff;
+    padding: 1.2rem 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+   
+}
+form::after,form::before{
+    --angle:0deg;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: conic-gradient(from var(--angle), transparent 20%, rgb(85, 241, 46));
+    border-radius: 5px;
+    top: -1.4%;
+    left: -1.2%;
+    z-index: -1;
+    padding: 4px;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+form::before{
+    filter: blur(30px);
+    opacity: 0.5;
+}
+form button{
+    /* height: 2rem; */
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    margin-top: 2rem ;
+    background-color: #0ecce6;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 6px 6px, rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+form div{
+    flex: 1;
+    width: 100%;
+    /* background-color: red; */
+}
+form div input{
+    width: 100%;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #11d1f3;
+}
+form div h4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.4rem 0;
+    margin: 0.5rem 0;
+}
+
+form div i{
+    position: absolute;
+    right: 3.5rem;
+    top: 59%;
+    cursor: pointer;
+    visibility: hidden;
+}
+.icon-visible{
+    visibility: visible;
+    color: #000;
+}
