@@ -10,16 +10,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
-    
 }
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
-form{
-    
+form{ 
     width: 22rem;
     /* height: 20rem; */
     background-color: #000;
@@ -30,8 +27,6 @@ form{
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    
-   
 }
 form::after,form::before{
     --angle:0deg;
@@ -73,7 +68,6 @@ form button{
     box-shadow: 0 6px 6px, rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-
 form div{
     flex: 1;
     width: 100%;
@@ -92,7 +86,6 @@ form div h4{
     padding: 0.4rem 0;
     margin: 0.5rem 0;
 }
-
 form div i{
     position: absolute;
     right: 3.5rem;
